@@ -1,15 +1,18 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
-
+import { Toaster } from "react-hot-toast";
+ 
 import { fetchMovieDetails } from "../../movies-api";
 
 import css from "./MovieAbout.module.css";
+// import { ErrorMessage } from "formik";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const MovieAbout= () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
+  const [error, setError] = useState(false);
   const release_date = new Date(movieDetails.release_date);
 
   useEffect(() => {
@@ -18,17 +21,15 @@ const MovieAbout= () => {
         const data = await fetchMovieDetails(movieId);
         setMovieDetails(data);
       } catch (error) {
-        toast.error("Something went wrong.Try again later", {
-          duration: 3000,
-          position: "top-right",
-        });
+        setError(true)
       }
     };
     getMovieDetails();
-  }, [movieId]);
+  }, [movieId,setError]);
 
   return (
     <div className={css.wrapper}>
+      {error && <ErrorMessage/>}
       <img
         className={css.image}
         src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}

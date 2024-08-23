@@ -18,11 +18,11 @@ function App() {
 
   return (
     <>
-      <header> 
+      {/* <header>  */}
         <div>
         <Navigation/>
          </div> 
-        </header> 
+        {/* </header>  */}
         <main>
         {loading && <Loader />}
     <Suspense fallback={<Loader />}>

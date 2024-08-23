@@ -1,11 +1,27 @@
-.list {
-    display: block;
+
+  .list {
+   display: block; 
     flex-wrap: wrap;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    /* list-style-type:circle; */
+    justify-content: left;
+    /* display: flex;
+    flex-direction: column; */
+   
+    /* margin: 0; */
+  }
+ 
+  .movieName{
+    color: rgb(44, 32, 148);
+    display: inline-block;
+  
   }
 
+  /* .movies{
 
+    margin-top: 20px;
+  } */
   
+
+   h4{
+    color: black;
+   }

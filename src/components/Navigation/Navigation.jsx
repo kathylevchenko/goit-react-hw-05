@@ -10,7 +10,6 @@ return clsx(css.link, isActive && css.active);
 
 export default function Navigation(){
     return(
-        <>
         <nav>
             <ul className={css.container}>
                 <li>
@@ -25,6 +24,6 @@ export default function Navigation(){
                 </li>
             </ul>
         </nav>
-        </>
     )
 }
+

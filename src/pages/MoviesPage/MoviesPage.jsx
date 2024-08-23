@@ -4,6 +4,8 @@ import Loader from "../../components/Loader/Loader";
 import MoviesList from "../../components/MovieList/MovieList";
 import { fetchMovies } from "../../movies-api";
 import SearchBox from "../../components/SearchBox/SearchBox"
+import css from "./MoviesPage.module.css"
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 const MoviesPage = () => {
   const [dataMovies, setDataMovies] = useState([]);
@@ -39,8 +41,9 @@ const MoviesPage = () => {
   };
 
   return (
-    <div>
-      <SearchBox onSearch={handleSearch} />
+    <div className={css.container}>
+      <SearchBox 
+      onSearch={handleSearch} />
       {isLoader && <Loader />}
       {dataMovies.length > 0 && <MoviesList movies={dataMovies} />}
       {isError && <ErrorMessage />}

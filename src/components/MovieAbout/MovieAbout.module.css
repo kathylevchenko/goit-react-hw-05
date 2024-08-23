@@ -15,10 +15,16 @@
   .textWrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+
+    
   }
   .list {
     padding: 0;
     margin: 0;
+    color: black;
+    
   }
   
+  h2, h3{
+    color: black;
+  }

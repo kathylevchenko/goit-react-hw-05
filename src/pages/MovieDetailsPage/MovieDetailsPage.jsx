@@ -3,7 +3,6 @@ import { Suspense, useRef } from "react";
 import css from "./MovieDetailsPage.module.css"
 import MovieAbout from "../../components/MovieAbout/MovieAbout";
 import Loader from "../../components/Loader/Loader";
-// import MovieInfo from "../../components/MovieInfo/MovieInfo";
 
 const MovieDetailsPage = () => {
   const location = useLocation();
@@ -19,12 +18,12 @@ const MovieDetailsPage = () => {
         <h2 className={css.title}>Additional information</h2>
         <ul>
           <li>
-            <Link className={css.link} to="cast">
+            <Link to="cast">
               Cast
             </Link>
           </li>
           <li>
-            <Link className={css.link} to="reviews">
+            <Link to="reviews">
               Reviews
             </Link>
           </li>
