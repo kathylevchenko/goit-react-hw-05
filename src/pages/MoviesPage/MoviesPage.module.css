@@ -1,0 +1,25 @@
+.btn{
+gap: 10px;
+border: 1px solid black;
+border-radius: 8px;
+background-color: rgb(234, 230, 230);
+color: rgb(14, 13, 13);
+padding: 10px;
+font-weight: 500;
+font-size: medium;
+justify-content: center;
+}
+
+.form{
+    padding: 10px;
+    color: black;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.container{
+display: flex;
+justify-content: center;
+}
